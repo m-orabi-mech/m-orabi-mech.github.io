@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahmoud Orabi | MEP & Sheet Metal Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0a1628;--navy2:#0f2244;--navy3:#1a3a6b;--gold:#c9952a;--gold2:#e8b84b;--white:#fff;--gray:#8a9bb0;--light:#e8edf5}
+body{font-family:'Cairo',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden}
+nav{position:fixed;top:0;width:100%;z-index:999;padding:14px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,22,40,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,149,42,0.2)}
+.nav-logo{font-size:1.2rem;font-weight:900;color:#e8b84b}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:#8a9bb0;text-decoration:none;font-size:0.82rem;font-family:'Outfit',sans-serif;transition:color 0.2s}
+.nav-links a:hover{color:#e8b84b}
+.lang-btn{background:rgba(201,149,42,0.15);border:1px solid #c9952a;color:#e8b84b;padding:6px 14px;border-radius:20px;cursor:pointer;font-size:0.78rem;font-family:'Outfit',sans-serif;transition:all 0.2s}
+.lang-btn:hover{background:#c9952a;color:#0a1628}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 50%,rgba(26,58,107,0.5) 0%,transparent 70%)}
+.blueprint{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(#c9952a 1px,transparent 1px),linear-gradient(90deg,#c9952a 1px,transparent 1px);background-size:50px 50px}
+.hero-inner{position:relative;display:flex;align-items:center;gap:50px;max-width:1000px;margin:0 auto;width:100%}
+.hero-photo{flex-shrink:0;width:210px;height:260px;border-radius:16px;overflow:hidden;border:3px solid rgba(201,149,42,0.4);box-shadow:0 0 40px rgba(201,149,42,0.15)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-content{flex:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,149,42,0.12);border:1px solid rgba(201,149,42,0.35);padding:6px 16px;border-radius:20px;font-size:0.75rem;color:#e8b84b;margin-bottom:20px;font-family:'Outfit',sans-serif}
+.dot{width:6px;height:6px;background:#e8b84b;border-radius:50%;display:inline-block}
+.hero-name{font-size:2.6rem;font-weight:900;line-height:1.15;margin-bottom:10px}
+.hero-name .hl{color:#e8b84b}
+.hero-title{font-size:0.95rem;color:#8a9bb0;margin-bottom:16px;font-family:'Outfit',sans-serif;line-height:1.6}
+.hero-title strong{color:#e8edf5;font-weight:600}
+.specialties{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.spec-tag{background:rgba(201,149,42,0.1);border:1px solid rgba(201,149,42,0.3);color:#e8b84b;padding:5px 14px;border-radius:20px;font-size:0.78rem;font-family:'Outfit',sans-serif}
+.hero-desc{font-size:0.88rem;color:#8a9bb0;line-height:1.8;margin-bottom:24px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.btn-primary{background:#c9952a;color:#0a1628;padding:11px 26px;border-radius:8px;font-weight:700;font-size:0.88rem;cursor:pointer;border:none;font-family:'Cairo',sans-serif;transition:all 0.2s}
+.btn-primary:hover{background:#e8b84b;transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#e8b84b;padding:11px 26px;border-radius:8px;font-weight:600;font-size:0.88rem;cursor:pointer;border:1.5px solid rgba(201,149,42,0.5);font-family:'Cairo',sans-serif;transition:all 0.2s}
+.btn-outline:hover{border-color:#e8b84b;background:rgba(201,149,42,0.08)}
+.social-links{display:flex;gap:10px;flex-wrap:wrap}
+.social-btn{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:8px;font-size:0.78rem;font-family:'Outfit',sans-serif;text-decoration:none;transition:all 0.2s;border:1px solid rgba(255,255,255,0.1);color:#e8edf5;background:rgba(255,255,255,0.05)}
+.social-btn:hover{transform:translateY(-2px)}
+.social-btn.whatsapp{background:rgba(37,211,102,0.1);border-color:rgba(37,211,102,0.4);color:#25d366}
+.social-btn.facebook{background:rgba(24,119,242,0.1);border-color:rgba(24,119,242,0.4);color:#4599ff}
+.social-btn.youtube{background:rgba(255,0,0,0.1);border-color:rgba(255,0,0,0.4);color:#ff4444}
+.social-btn.linkedin{background:rgba(10,102,194,0.1);border-color:rgba(10,102,194,0.4);color:#4da6ff}
+.hero-stats{display:flex;gap:32px;margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.07)}
+.stat-num{font-size:1.6rem;font-weight:900;color:#e8b84b}
+.stat-lbl{font-size:0.72rem;color:#8a9bb0;font-family:'Outfit',sans-serif}
+
+/* SECTIONS */
+section{padding:80px 40px}
+.section-header{text-align:center;margin-bottom:50px}
+.section-tag{display:inline-block;background:rgba(201,149,42,0.1);border:1px solid rgba(201,149,42,0.3);color:#e8b84b;padding:4px 16px;border-radius:20px;font-size:0.75rem;margin-bottom:12px;font-family:'Outfit',sans-serif}
+.section-title{font-size:1.9rem;font-weight:900;margin-bottom:10px}
+.section-sub{color:#8a9bb0;font-size:0.88rem;font-family:'Outfit',sans-serif;max-width:500px;margin:0 auto;line-height:1.7}
+
+/* ABOUT */
+#about{background:#0f2244}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:960px;margin:0 auto;align-items:start}
+.about-text p{color:#8a9bb0;line-height:1.9;font-size:0.92rem;margin-bottom:14px}
+.about-text p strong{color:#e8edf5}
+.fields-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.field-card{background:rgba(10,22,40,0.8);border:1px solid rgba(201,149,42,0.2);border-radius:10px;padding:14px;text-align:center}
+.field-icon{font-size:1.6rem;margin-bottom:6px}
+.field-name{font-size:0.82rem;font-weight:700;color:#e8edf5;margin-bottom:4px}
+.field-desc{font-size:0.72rem;color:#8a9bb0;font-family:'Outfit',sans-serif}
+.skills-title{font-size:0.85rem;color:#8a9bb0;margin-bottom:12px;font-family:'Outfit',sans-serif}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.skill-tag{background:rgba(26,58,107,0.6);border:1px solid rgba(201,149,42,0.15);padding:9px 12px;border-radius:8px;font-size:0.8rem;display:flex;align-items:center;gap:7px;color:#e8edf5}
+.skill-tag:hover{border-color:rgba(201,149,42,0.4)}
+.sdot{width:5px;height:5px;background:#c9952a;border-radius:50%;flex-shrink:0}
+
+/* PROJECTS */
+#projects{background:#0a1628}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;max-width:960px;margin:0 auto}
+.project-card{background:#0f2244;border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:22px;transition:all 0.25s;position:relative;overflow:hidden}
+.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#c9952a,#e8b84b);transform:scaleX(0);transition:transform 0.3s;transform-origin:right}
+.project-card:hover{border-color:rgba(201,149,42,0.25);transform:translateY(-3px)}
+.project-card:hover::before{transform:scaleX(1);transform-origin:left}
+.proj-icon{width:42px;height:42px;background:rgba(201,149,42,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:14px}
+.proj-field{display:inline-block;background:rgba(201,149,42,0.08);border:1px solid rgba(201,149,42,0.2);color:#e8b84b;padding:2px 10px;border-radius:10px;font-size:0.68rem;font-family:'Outfit',sans-serif;margin-bottom:8px}
+.proj-type{font-size:0.7rem;color:#c9952a;font-family:'Outfit',sans-serif;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.proj-title{font-size:0.95rem;font-weight:700;margin-bottom:8px;line-height:1.4}
+.proj-desc{font-size:0.8rem;color:#8a9bb0;line-height:1.7;font-family:'Outfit',sans-serif}
+.proj-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
+.proj-tag{background:rgba(201,149,42,0.08);border:1px solid rgba(201,149,42,0.2);color:#e8b84b;padding:2px 8px;border-radius:10px;font-size:0.68rem;font-family:'Outfit',sans-serif}
+
+/* CERTIFICATES */
+#certificates{background:#0f2244}
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;max-width:1300px;margin:0 auto}
+.cert-card{background:rgba(10,22,40,0.6);border:1px solid rgba(201,149,42,0.15);border-radius:12px;padding:18px;transition:all 0.2s;display:flex;flex-direction:column}
+.cert-card:hover{border-color:rgba(201,149,42,0.4);transform:translateY(-2px)}
+.cert-icon{font-size:1.6rem;margin-bottom:10px}
+.cert-cat{font-size:0.65rem;color:#c9952a;font-family:'Outfit',sans-serif;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.cert-name{font-size:0.85rem;font-weight:700;margin-bottom:4px;line-height:1.4;flex:1}
+.cert-org{font-size:0.72rem;color:#e8b84b;font-family:'Outfit',sans-serif;margin-bottom:6px}
+.cert-year{font-size:0.7rem;color:#8a9bb0;font-family:'Outfit',sans-serif;margin-bottom:10px}
+.cert-link{display:inline-block;background:rgba(201,149,42,0.12);border:1px solid rgba(201,149,42,0.35);color:#e8b84b;padding:4px 12px;border-radius:16px;font-size:0.72rem;text-decoration:none;transition:all 0.2s;text-align:center}
+.cert-link:hover{background:rgba(201,149,42,0.25)}
+
+/* CV */
+#cv{background:#0a1628}
+.cv-box{max-width:680px;margin:0 auto;background:#0f2244;border:1px solid rgba(201,149,42,0.2);border-radius:16px;padding:36px;text-align:center}
+.cv-icon{font-size:2.8rem;margin-bottom:14px}
+.cv-title{font-size:1.3rem;font-weight:900;margin-bottom:10px}
+.cv-desc{color:#8a9bb0;font-size:0.88rem;line-height:1.7;margin-bottom:26px;font-family:'Outfit',sans-serif}
+.cv-btn{display:inline-flex;align-items:center;gap:10px;background:#c9952a;color:#0a1628;padding:13px 30px;border-radius:10px;font-weight:700;font-size:0.95rem;cursor:pointer;border:none;font-family:'Cairo',sans-serif;text-decoration:none;transition:all 0.2s}
+.cv-btn:hover{background:#e8b84b;transform:translateY(-2px)}
+
+/* CONTACT */
+#contact{background:#0f2244}
+.contact-inner{max-width:700px;margin:0 auto;text-align:center}
+.contact-inner p{color:#8a9bb0;font-size:0.92rem;line-height:1.9;margin-bottom:28px;font-family:'Outfit',sans-serif}
+.contact-items{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto 28px}
+.contact-item{display:flex;align-items:center;gap:12px;color:#e8edf5;font-size:0.85rem;justify-content:flex-end}
+.contact-item a{color:#e8edf5;text-decoration:none;transition:color 0.2s}
+.contact-item a:hover{color:#e8b84b}
+.c-icon{width:34px;height:34px;background:rgba(201,149,42,0.1);border:1px solid rgba(201,149,42,0.25);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0}
+.social-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.whatsapp-big{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:rgba(37,211,102,0.1);border:1.5px solid rgba(37,211,102,0.5);color:#25d366;padding:14px 32px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;transition:all 0.2s;font-family:'Cairo',sans-serif}
+.whatsapp-big:hover{background:rgba(37,211,102,0.2);transform:translateY(-2px)}
+
+footer{background:#0a1628;padding:26px 40px;text-align:center;border-top:1px solid rgba(255,255,255,0.06)}
+footer p{color:#8a9bb0;font-size:0.8rem;font-family:'Outfit',sans-serif}
+footer span{color:#e8b84b}
+
+.ar-text,.en-text{transition:opacity 0.2s}
+body.en-mode .ar-text{display:none}
+body.en-mode .en-text{display:block}
+body:not(.en-mode) .en-text{display:none}
+body:not(.en-mode) .ar-text{display:block}
+
+@media(max-width:700px){
+  nav{padding:12px 20px}.nav-links{display:none}
+  #hero{padding:88px 20px 50px}
+  .hero-inner{flex-direction:column;gap:24px}
+  .hero-photo{width:150px;height:185px}
+  .hero-name{font-size:1.9rem}
+  .about-grid{grid-template-columns:1fr}
+  section{padding:60px 20px}
+  .hero-stats{gap:18px}
+  .certs-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo ar-text">م. محمود عرابي</div>
+  <div class="nav-logo en-text">Eng. Mahmoud Orabi</div>
+  <ul class="nav-links">
+    <li><a href="#about" class="ar-text">عني</a><a href="#about" class="en-text">About</a></li>
+    <li><a href="#projects" class="ar-text">مشاريعي</a><a href="#projects" class="en-text">Projects</a></li>
+    <li><a href="#certificates" class="ar-text">شهاداتي</a><a href="#certificates" class="en-text">Certs</a></li>
+    <li><a href="#cv" class="ar-text">السيرة الذاتية</a><a href="#cv" class="en-text">CV</a></li>
+    <li><a href="#contact" class="ar-text">تواصل</a><a href="#contact" class="en-text">Contact</a></li>
+  </ul>
+  <button class="lang-btn" onclick="toggleLang()">EN / عربي</button>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="blueprint"></div>
+  <div class="hero-inner">
+    <div class="hero-photo">
+      <img src="photo1.jpg" alt="Mahmoud Orabi">
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span><span class="ar-text">مهندس ميكانيكا — MEP & Sheet Metal</span><span class="en-text">Mechanical Engineer — MEP & Sheet Metal</span></div>
+      <h1 class="hero-name ar-text">مرحباً، أنا<br><span class="hl">محمود حمدي عرابي</span></h1>
+      <h1 class="hero-name en-text">Hi, I'm<br><span class="hl">Mahmoud Hamdy Orabi</span></h1>
+      <p class="hero-title ar-text"><strong>مهندس ميكانيكا حديث تخرج</strong> — جامعة جنوب الوادي</p>
+      <p class="hero-title en-text"><strong>Mechanical Engineering Graduate</strong> — South Valley University</p>
+      <div class="specialties">
+        <span class="spec-tag">🔧 MEP Engineering</span>
+        <span class="spec-tag">🏗️ Sheet Metal</span>
+        <span class="spec-tag">❄️ HVAC</span>
+        <span class="spec-tag">🔥 Fire Fighting</span>
+      </div>
+      <p class="hero-desc ar-text">شغوف بمجالين متكاملين — تصميم أنظمة MEP من HVAC وسباكة وإطفاء حريق، وكمان تصنيع وتشغيل الـ Sheet Metal. بدمج الاتنين عندي رؤية هندسية شاملة من التصميم للتنفيذ.</p>
+      <p class="hero-desc en-text">Passionate about two complementary fields — MEP systems design (HVAC, plumbing, fire fighting) and Sheet Metal fabrication. Combining both gives me a complete engineering vision from design to execution.</p>
+      <div class="hero-btns">
+        <button class="btn-primary ar-text" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">شوف مشاريعي</button>
+        <button class="btn-primary en-text" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
+        <button class="btn-outline ar-text" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">تواصل معي</button>
+        <button class="btn-outline en-text" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+      </div>
+      <div class="social-links">
+        <a href="https://wa.me/201022947400" target="_blank" class="social-btn whatsapp">💬 WhatsApp</a>
+        <a href="https://www.facebook.com/share/1B2ubkgGEK/" target="_blank" class="social-btn facebook">📘 Facebook</a>
+        <a href="https://www.youtube.com/@aymanhamada3745" target="_blank" class="social-btn youtube">▶️ YouTube</a>
+        <a href="https://www.linkedin.com/in/mahmoudorabi" target="_blank" class="social-btn linkedin">💼 LinkedIn</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">2024</div><div class="stat-lbl ar-text">سنة التخرج</div><div class="stat-lbl en-text">Grad Year</div></div>
+        <div class="stat"><div class="stat-num">2</div><div class="stat-lbl ar-text">تخصصات</div><div class="stat-lbl en-text">Specialties</div></div>
+        <div class="stat"><div class="stat-num">6+</div><div class="stat-lbl ar-text">شهادات</div><div class="stat-lbl en-text">Certificates</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-header">
+    <div class="section-tag ar-text">من أنا</div>
+    <div class="section-tag en-text">About Me</div>
+    <h2 class="section-title ar-text">عني وتخصصاتي</h2>
+    <h2 class="section-title en-text">My Background</h2>
+  </div>
+  <div class="about-grid">
+    <div>
+      <div class="fields-grid">
+        <div class="field-card">
+          <div class="field-icon">🔧</div>
+          <div class="field-name">MEP Engineering</div>
+          <div class="field-desc ar-text">تصميم أنظمة HVAC والسباكة وإطفاء الحريق والغازات الطبية</div>
+          <div class="field-desc en-text">HVAC, Plumbing, Fire Fighting & Medical Gas Systems Design</div>
+        </div>
+        <div class="field-card">
+          <div class="field-icon">🏗️</div>
+          <div class="field-name">Sheet Metal</div>
+          <div class="field-desc ar-text">تصنيع وتشغيل الشيت ميتال والمكونات المعدنية</div>
+          <div class="field-desc en-text">Sheet Metal Fabrication & Metalwork Components</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="ar-text">تخرجت من <strong>كلية الهندسة — جامعة جنوب الوادي</strong> وأنا متحمس لمجالين متكاملين. في MEP اشتغلت على تصميم أنظمة كاملة لمباني سكنية وتجارية ومستشفيات باستخدام AutoCAD وRevit.</p>
+        <p class="en-text">I graduated from <strong>Faculty of Engineering — South Valley University</strong> with passion for two complementary fields. In MEP, I worked on complete system designs for residential, commercial and hospital buildings using AutoCAD and Revit.</p>
+        <p class="ar-text">في مجال <strong>Sheet Metal</strong> أتممت كورس متخصص من SMART HTI وعندي خلفية عملية في التصنيع. الجمع بين التصميم والتصنيع بيديني ميزة تنافسية قوية.</p>
+        <p class="en-text">In <strong>Sheet Metal</strong>, I completed a specialized course from SMART HTI with practical fabrication experience. Combining design and manufacturing gives me a strong competitive advantage.</p>
+      </div>
+    </div>
+    <div>
+      <p class="skills-title ar-text">المهارات التقنية:</p>
+      <p class="skills-title en-text">Technical Skills:</p>
+      <div class="skills-grid">
+        <div class="skill-tag"><span class="sdot"></span>AutoCAD</div>
+        <div class="skill-tag"><span class="sdot"></span>Revit MEP</div>
+        <div class="skill-tag"><span class="sdot"></span>HVAC Design</div>
+        <div class="skill-tag"><span class="sdot"></span>Plumbing Systems</div>
+        <div class="skill-tag"><span class="sdot"></span>Fire Fighting</div>
+        <div class="skill-tag"><span class="sdot"></span>Autoflood</div>
+        <div class="skill-tag"><span class="sdot"></span>Sheet Metal</div>
+        <div class="skill-tag"><span class="sdot"></span>Medical Gas</div>
+        <div class="skill-tag"><span class="sdot"></span>HAP Software</div>
+        <div class="skill-tag"><span class="sdot"></span>MS Office</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-header">
+    <div class="section-tag ar-text">أعمالي</div>
+    <div class="section-tag en-text">My Work</div>
+    <h2 class="section-title ar-text">المشاريع</h2>
+    <h2 class="section-title en-text">Projects</h2>
+    <p class="section-sub ar-text">مشاريع في مجال MEP وSheet Metal</p>
+    <p class="section-sub en-text">Projects in MEP and Sheet Metal fields</p>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="proj-icon">🏢</div>
+      <span class="proj-field">MEP</span>
+      <div class="proj-type ar-text">مشروع التخرج</div>
+      <div class="proj-type en-text">Graduation Project</div>
+      <h3 class="proj-title ar-text">تصميم أنظمة MEP لمبنى سكني</h3>
+      <h3 class="proj-title en-text">MEP Design for Residential Building</h3>
+      <p class="proj-desc ar-text">تصميم كامل لأنظمة التكييف والتهوية وإمدادات المياه والصرف الصحي لمبنى سكني متعدد الطوابق</p>
+      <p class="proj-desc en-text">Full design of HVAC, water supply and drainage systems for a multi-story residential building</p>
+      <div class="proj-tags"><span class="proj-tag">HVAC</span><span class="proj-tag">Plumbing</span><span class="proj-tag">AutoCAD</span></div>
+    </div>
+    <div class="project-card">
+      <div class="proj-icon">🏥</div>
+      <span class="proj-field">MEP</span>
+      <div class="proj-type ar-text">مشروع تدريبي</div>
+      <div class="proj-type en-text">Training Project</div>
+      <h3 class="proj-title ar-text">تصميم أنظمة MEP لمستشفى</h3>
+      <h3 class="proj-title en-text">MEP Design for Hospital</h3>
+      <p class="proj-desc ar-text">تصميم أنظمة HVAC والسباكة وإطفاء الحريق والغازات الطبية لمبنى مستشفى</p>
+      <p class="proj-desc en-text">Design of HVAC, plumbing, fire fighting and medical gas systems for a hospital</p>
+      <div class="proj-tags"><span class="proj-tag">Medical Gas</span><span class="proj-tag">Fire Fighting</span><span class="proj-tag">Revit</span></div>
+    </div>
+    <div class="project-card">
+      <div class="proj-icon">🍽️</div>
+      <span class="proj-field">MEP</span>
+      <div class="proj-type ar-text">مشروع تدريبي</div>
+      <div class="proj-type en-text">Training Project</div>
+      <h3 class="proj-title ar-text">تصميم MEP لمطبخ مركزي</h3>
+      <h3 class="proj-title en-text">MEP Design for Central Kitchen</h3>
+      <p class="proj-desc ar-text">تصميم أنظمة التهوية والسباكة وإطفاء الحريق لمطبخ مركزي تجاري</p>
+      <p class="proj-desc en-text">Ventilation, plumbing and fire fighting systems for a commercial central kitchen</p>
+      <div class="proj-tags"><span class="proj-tag">HVAC</span><span class="proj-tag">Autoflood</span><span class="proj-tag">AutoCAD</span></div>
+    </div>
+    <div class="project-card">
+      <div class="proj-icon">🏗️</div>
+      <span class="proj-field">Sheet Metal</span>
+      <div class="proj-type ar-text">مشروع تدريبي</div>
+      <div class="proj-type en-text">Training Project</div>
+      <h3 class="proj-title ar-text">مشروع Sheet Metal الختامي</h3>
+      <h3 class="proj-title en-text">Sheet Metal Final Project</h3>
+      <p class="proj-desc ar-text">مشروع ختامي لكورس Sheet Metal من SMART HTI — تصنيع مكونات معدنية بتقدير جيد جداً</p>
+      <p class="proj-desc en-text">Final project for Sheet Metal course at SMART HTI — metal component fabrication, Grade: Very Good</p>
+      <div class="proj-tags"><span class="proj-tag">Sheet Metal</span><span class="proj-tag">Fabrication</span><span class="proj-tag">HTI</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <div class="section-header">
+    <div class="section-tag ar-text">إنجازاتي</div>
+    <div class="section-tag en-text">Achievements</div>
+    <h2 class="section-title ar-text">الشهادات والتدريبات</h2>
+    <h2 class="section-title en-text">Certificates & Training</h2>
+  </div>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <div class="cert-icon">🎓</div>
+      <div class="cert-cat ar-text">تعليم</div>
+      <div class="cert-cat en-text">Education</div>
+      <div class="cert-name ar-text">بكالوريوس الهندسة الميكانيكية</div>
+      <div class="cert-name en-text">B.Sc. Mechanical Engineering</div>
+      <div class="cert-org ar-text">جامعة جنوب الوادي</div>
+      <div class="cert-org en-text">South Valley University</div>
+      <div class="cert-year">2024</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">⚙️</div>
+      <div class="cert-cat">MEP</div>
+      <div class="cert-name">Zero Track — AutoCAD, Revit & Autoflood</div>
+      <div class="cert-org">ENG-X Engineering Training</div>
+      <div class="cert-year">OCT 2024</div>
+      <a href="cert1.pdf" target="_blank" class="cert-link">📄 عرض الشهادة</a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🔥</div>
+      <div class="cert-cat">MEP</div>
+      <div class="cert-name">Technical Track — HVAC, Plumbing & Fire Fighting</div>
+      <div class="cert-org">ENG-X Engineering Training</div>
+      <div class="cert-year">NOV 2024</div>
+      <a href="cert2.pdf" target="_blank" class="cert-link">📄 عرض الشهادة</a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🔩</div>
+      <div class="cert-cat">Sheet Metal</div>
+      <div class="cert-name">Sheet Metal Course</div>
+      <div class="cert-org">SMART Team — HTI</div>
+      <div class="cert-year">Grade: Very Good</div>
+      <a href="Cert3.jpg" target="_blank" class="cert-link">📄 عرض الشهادة</a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🏭</div>
+      <div class="cert-cat ar-text">تدريب صناعي</div>
+      <div class="cert-cat en-text">Industrial Training</div>
+      <div class="cert-name ar-text">تدريب صيفي — مصانع السكر</div>
+      <div class="cert-name en-text">Summer Training — Sugar Factories</div>
+      <div class="cert-org ar-text">شركة السكر والصناعات التكاملية — نجع حمادي</div>
+      <div class="cert-org en-text">Sugar & Integrated Industries Co.</div>
+      <div class="cert-year ar-text">تقدير: ممتاز</div>
+      <div class="cert-year en-text">Grade: Excellent</div>
+      <a href="train1.jpg" target="_blank" class="cert-link">📄 عرض الشهادة</a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🏭</div>
+      <div class="cert-cat ar-text">تدريب صناعي</div>
+      <div class="cert-cat en-text">Industrial Training</div>
+      <div class="cert-name ar-text">تدريب صيفي — الفيبربورد</div>
+      <div class="cert-name en-text">Summer Training — Fiber Board</div>
+      <div class="cert-org">Nag-Hamady Fiber Board Co. (NFB)</div>
+      <div class="cert-year">يوليو 2024</div>
+      <a href="train2.jpg" target="_blank" class="cert-link">📄 عرض الشهادة</a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🏭</div>
+      <div class="cert-cat ar-text">تدريب صناعي</div>
+      <div class="cert-cat en-text">Industrial Training</div>
+      <div class="cert-name ar-text">تدريب — شركة النيل للزيوت</div>
+      <div class="cert-name en-text">Training — Nile Oil & Detergents</div>
+      <div class="cert-org">The Nile Company for Oil & Detergents (NOD)</div>
+      <div class="cert-year ar-text">سوهاج</div>
+      <div class="cert-year en-text">Sohag</div>
+      <a href="train3.jpg" target="_blank" class="cert-link">📄 عرض الشهادة</a>
+    </div>
+  </div>
+</section>
+
+<section id="cv">
+  <div class="section-header">
+    <div class="section-tag ar-text">السيرة الذاتية</div>
+    <div class="section-tag en-text">Resume</div>
+    <h2 class="section-title ar-text">حمّل السيرة الذاتية</h2>
+    <h2 class="section-title en-text">Download My CV</h2>
+  </div>
+  <div class="cv-box">
+    <div class="cv-icon">📄</div>
+    <h3 class="cv-title ar-text">السيرة الذاتية الكاملة</h3>
+    <h3 class="cv-title en-text">Full Curriculum Vitae</h3>
+    <p class="cv-desc ar-text">احصل على نسخة كاملة من سيرتي الذاتية تشمل تعليمي ومهاراتي في MEP وSheet Metal وخبراتي التدريبية</p>
+    <p class="cv-desc en-text">Get my full CV including education, MEP & Sheet Metal skills, and training experience</p>
+    <a href="cv.pdf" class="cv-btn ar-text">⬇️ تحميل الـ CV</a>
+    <a href="cv.pdf" class="cv-btn en-text">⬇️ Download CV</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-header">
+    <div class="section-tag ar-text">تواصل</div>
+    <div class="section-tag en-text">Contact</div>
+    <h2 class="section-title ar-text">تواصل معي</h2>
+    <h2 class="section-title en-text">Get In Touch</h2>
+  </div>
+  <div class="contact-inner">
+    <p class="ar-text">مهندس ميكانيكا حديث تخرج متخصص في MEP وSheet Metal — متشوق لأي فرصة عمل. تواصل معي مباشرة!</p>
+    <p class="en-text">Fresh mechanical engineering graduate specializing in MEP & Sheet Metal — eager for any job opportunity. Contact me directly!</p>
+    <div class="contact-items">
+      <div class="contact-item"><div class="c-icon">📧</div><span>mahmoud.orabi.mech@gmail.com</span></div>
+      <div class="contact-item"><div class="c-icon">📱</div><a href="https://wa.me/201022947400" target="_blank">+20 102 294 7400</a></div>
+      <div class="contact-item"><div class="c-icon">📍</div><span class="ar-text">سوهاج — مصر</span><span class="en-text">Sohag, Egypt</span></div>
+    </div>
+    <div class="social-row">
+      <a href="https://wa.me/201022947400" target="_blank" class="social-btn whatsapp">💬 WhatsApp</a>
+      <a href="https://www.facebook.com/share/1B2ubkgGEK/" target="_blank" class="social-btn facebook">📘 Facebook</a>
+      <a href="https://www.youtube.com/@aymanhamada3745" target="_blank" class="social-btn youtube">▶️ YouTube</a>
+      <a href="https://www.linkedin.com/in/mahmoudorabi" target="_blank" class="social-btn linkedin">💼 LinkedIn</a>
+    </div>
+    <a href="https://wa.me/201022947400?text=مرحباً محمود، رأيت موقعك وأريد التواصل معك" target="_blank" class="whatsapp-big ar-text">💬 تواصل مباشرة على واتساب</a>
+    <a href="https://wa.me/201022947400?text=Hello Mahmoud, I saw your portfolio and would like to connect" target="_blank" class="whatsapp-big en-text">💬 Contact me on WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <p class="ar-text">صُمم بـ ❤️ | <span>محمود حمدي عرابي</span> — MEP & Sheet Metal Engineer</p>
+  <p class="en-text">Designed with ❤️ | <span>Mahmoud Hamdy Orabi</span> — MEP & Sheet Metal Engineer</p>
+</footer>
+
+<script>
+function toggleLang(){
+  document.body.classList.toggle('en-mode');
+  document.documentElement.dir=document.body.classList.contains('en-mode')?'ltr':'rtl';
+  document.documentElement.lang=document.body.classList.contains('en-mode')?'en':'ar';
+}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
